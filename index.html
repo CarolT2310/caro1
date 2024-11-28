@@ -45,5 +45,18 @@
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="chatbot.js"&gt;&lt;/script&gt;</p>
 <p class="p1">&lt;/body&gt;</p>
 <p class="p1">&lt;/html&gt;</p>
+  <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "2cca3415-0598-46fc-9225-27a6f982d88b", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "1d8d256b-74c2-4246-b0bf-a71d15420944", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
